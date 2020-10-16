@@ -44,6 +44,16 @@ def main():
     for row in data_tuple:
         print(row)
 
+    # sql注入
+    sql = "select * from students where name = '%s';" % "xiaolan' or 1 = 1 or '"
+    cursor.execute(sql)
+    print(cursor.fetchall())
+    # 防止sql注入
+    # %s是sql语句的参数
+    sql = "select * from students where name = %s;"
+    cursor.execute(sql, ("xiaolan' or 1 = 1 or '",))
+    print(cursor.fetchall())
+    
     # 关闭游标
     cursor.close()
     # 关闭连接
