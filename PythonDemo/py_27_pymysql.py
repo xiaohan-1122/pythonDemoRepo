@@ -7,7 +7,11 @@
 
 import pymysql
 
-
+"""
+mysql数据库默认采用自动提交模式，也就是修改数据（insert、update、delete）的操作会自动触发事务
+pymysql里面的conn.commit()就是提交事务
+pymysql里面的conn.rollback()就是回滚事务
+"""
 def main():
     # 创建连接对象
     conn = pymysql.connect(host='47.92.123.248',
