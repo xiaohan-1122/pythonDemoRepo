@@ -62,7 +62,7 @@ def work():
 
 work()
 
-# ------------- 带参数装饰器 ------------------
+# ------------- 装饰器装饰带参数函数 ------------------
 def decorator_add(func):
     def inner(num1, num2):
         print('正在努力执行加法运算....')
@@ -81,7 +81,7 @@ add_num(1, 4)
 正在努力执行加法运算....
 结果为：5
 """
-# ------------- 有返回值装饰器 ------------------
+# ------------- 装饰器装饰有返回值函数 ------------------
 def decorator_add2(func):
     def inner(num1, num2):
         print('2正在努力执行加法运算....')
@@ -99,7 +99,7 @@ print(f'有返回值函数：result = {result}')
 正在努力执行加法运算....
 有返回值函数：result = 3
 '''
-# ------------- 不定长参数装饰器 ------------------
+# ------------- 装饰器装饰不定长参数函数 ------------------
 def decorator_add3(func):
     def inner(*args, **kwargs):
         print('3正在努力执行加法运算....')
@@ -145,3 +145,89 @@ def show():
 
 
 show()
+
+# ------------- 多个装饰器对同一个函数装饰 ------------------
+"""
+多个装饰器的执行过程：
+由内到外装饰，先执行内部装饰器，再执行外部装饰器
+"""
+def make_p(func):
+    print('make_p装饰器执行了')
+    def inner():
+        content = '<p>' + func() + '</p>'
+        return content
+    return inner
+
+def make_div(func):
+    print('make_div装饰器执行了')
+    def inner():
+        content = '<div>' + func() + '</div>'
+        return content
+    return inner
+
+@make_div
+@make_p
+def content():
+    return "装饰器使用练习"
+
+"""
+make_p装饰器执行了
+make_div装饰器执行了
+<div><p>装饰器使用练习</p></div>
+"""
+
+print(content())
+
+
+# ------------- 带参数的装饰器 ------------------
+def return_decorator(flag):
+    def decorator(func):
+        def inner(num1, num2):
+            if flag == '+':
+                print('正在努力执行加法运算')
+            elif flag == '-':
+                print('正在努力执行减法运算')
+            func(num1, num2)
+        return inner
+    return decorator
+
+@return_decorator('+')
+def add_num(a, b):
+    res = a + b
+    print(res)
+
+@return_decorator('-')
+def sub_num(a, b):
+    res = a - b
+    print(res)
+
+
+add_num(2, 5)
+sub_num(5, 2)
+'''
+正在努力执行加法运算
+7
+正在努力执行减法运算
+3
+'''
+
+# -------------------- 类装饰器 ------------------------
+class Check(object):
+    def __init__(self, func):
+        self._func = func
+
+    # 实现__call__方法，表示对象是一个可调用对象，可以像调用函数一样进行调用。
+    def __call__(self, *args, **kwargs):
+        print('添加装饰功能')
+        self._func()
+
+@Check
+def show():
+    print('快要下雪了')
+
+
+show()
+'''
+添加装饰功能
+快要下雪了
+'''
