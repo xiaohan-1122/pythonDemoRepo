@@ -28,6 +28,18 @@ print(info)
 ?   匹配前一个字符出现0次或1次，即至多1次
 {m}  匹配前一个字符出现m次
 {m,n}   匹配前一个字符出现 m 到 n 次
+[^指定字符] 除了指定字符都匹配
+匹配开头和结尾
+^   匹配字符串开头
+$   匹配字符串结尾
+
+
+匹配分组
+|   匹配左右任意一个表达式
+(ab)    将括号中字符串作为一个分组
+\num    引用分组num匹配到的字符串
+(?P<name>)  分组起别名
+(?P=name)   引用别名为name分组匹配到的字符串
 """
 # -------------- 匹配单个字符 ------------------
 # .表示任意一个字符
@@ -60,8 +72,30 @@ match_obj = re.match('\W', '&')
 
 
 # -------------- 匹配多个字符 ------------------
+# w出现0次或多次
+match_obj = re.match("tw*o", "twwwwwo")
+print(match_obj.group())
+# 中间任意字符出现0次或多次
+match_obj = re.match("t.*o", "tdaso")
+# w至少出现一次
+match_obj = re.match("tw+o", "two")
+# t出现2次
+match_obj = re.match("ht{2}p", "http")
+# t出现2-4次
+match_obj = re.match("ht{2,4}p", "htttp")
+# t至少出现2次
+match_obj = re.match("ht{2,}p", "htttp")
 
 
+# -------------- 匹配开头和结尾 ------------------
+# 匹配数字开头
+match_obj = re.match("^\d.*", "12dss")
+# 匹配数字结尾
+match_obj = re.match(".*\d$", "dsds2")
+
+# 中间除了abc都匹配
+match_obj = re.match("a[^abc]f", "agf")
+print(match_obj.group())
 
 
 
