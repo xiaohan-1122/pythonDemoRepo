@@ -97,5 +97,34 @@ match_obj = re.match(".*\d$", "dsds2")
 match_obj = re.match("a[^abc]f", "agf")
 print(match_obj.group())
 
+# -------------- 匹配分组 ------------------
+fruit_list = ['apple', 'banana', 'bear', 'orange']
+for fruit in fruit_list:
+    match_obj = re.match('apple|bear', fruit)
+    if match_obj:
+        print(match_obj.group())
+
+# 匹配163、126、qq等邮箱 邮箱名4-20个字符
+match_obj = re.match('[a-zA-Z0-9_]{4,20}@(163|126|qq)\.com', 'hello@126.com')
+print(match_obj.group())
+# 一个小括号表示一个分组，分组从1开始，顺序从左到右依次排序
+match_obj = re.match('([a-zA-Z0-9_]{4,20})@(163|126|qq)\.com', 'hello@163.com')
+# 获取整个匹配的数据，如果使用分组的话，默认是0
+print(match_obj.group(0))   # hello@163.com
+# 获取匹配分组数据
+print(match_obj.group(2))   # 163
+
+
+# \1引用前面匹配到的标签，是匹配的标签前后一致, <html>hh</div>匹配失败
+match_obj = re.match('<([a-zA-Z1-6]+)>.*</\\1>', '<html>hh</html>')
+
+match_obj = re.match('<([a-zA-Z1-6]+)><([a-zA-Z1-6]+)>.*</\\2></\\1>', '<html><h1>test.test</h1></html>')
+
+match_obj = re.match('<(?P<name1>[a-zA-Z1-6]+)><(?P<name2>[a-zA-Z1-6]+)>.*</(?P=name2)></(?P=name1)>', '<html><h1>test.test</h1></html>')
+
+
+
+
+
 
 
