@@ -10,10 +10,8 @@ import json
 
 # 获取数据
 res = requests.get('https://pvp.qq.com/web201605/js/herolist.json')
-# print(res.json())
 # hero_list = res.json()
 hero_list = json.loads(res.content)
-# print(hero_list)
 
 img_count = 0
 # for i in range(len(hero_list))：
