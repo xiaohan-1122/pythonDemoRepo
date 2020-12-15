@@ -44,10 +44,10 @@ def get_word_list():
 
     # 6 词云图的绘制
     # 1）读取背景图片
-    back_picture = imread(r"G:\6Tipdm\wordcloud\jay1.jpg")
+    back_picture = imread("kakaxi.jpg")
 
     # 2）设置词云参数
-    wc = WordCloud(font_path="G:\\6Tipdm\\wordcloud\\simhei.ttf",
+    wc = WordCloud(font_path="FZNiNSJW.TTF",
                    background_color="white",
                    max_words=2000,
                    mask=back_picture,

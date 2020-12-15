@@ -10,6 +10,7 @@ import re
 import chardet
 import requests
 from pprint import pprint
+import ciyuntu
 
 # 爬取B站弹幕数据的API：https://api.bilibili.com/x/v1/dm/list.so?oid=XXX
 # 获取oid的接口：https://api.bilibili.com/x/player/pagelist?bvid=BV1PK4y1b7dt&jsonp=jsonp
@@ -78,12 +79,13 @@ def save_to_file(data):
 
 def main():
     # 要爬取字幕的视频页面
-    video_url = "https://www.bilibili.com/video/BV1tD4y1X7Ru?t=345"
+    video_url = "https://www.bilibili.com/video/BV17y4y1B7wP"
     bvid = get_bvid(video_url)
     cid = get_cid(bvid)
     dm_list = get_data(cid)
     # print(dm_list)
     save_to_file(dm_list)
+    ciyuntu.get_word_list()
 
 
 if __name__ == '__main__':
