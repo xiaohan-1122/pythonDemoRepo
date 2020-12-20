@@ -3,7 +3,7 @@
 # @Software: requestsDemo
 # @File: requests03_豆瓣电影.py
 # @Author: xiaohanzhang
-# @Data: 2020/12/6
+# @Date: 2020/12/6
 
 import requests
 import json

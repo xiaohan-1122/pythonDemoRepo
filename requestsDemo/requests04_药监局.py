@@ -3,7 +3,7 @@
 # @Software: requestsDemo
 # @File: requests04_药监局.py
 # @Author: xiaohanzhang
-# @Data: 2020/12/8
+# @Date: 2020/12/8
 
 import requests
 import json

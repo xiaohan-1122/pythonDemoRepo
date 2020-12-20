@@ -3,7 +3,7 @@
 # @Software: requestsDemo
 # @File: requests01_爬取网页.py
 # @Author: xiaohanzhang
-# @Data: 2020/12/3
+# @Date: 2020/12/3
 
 import requests
 

@@ -3,7 +3,7 @@
 # @Software: requestsDemo
 # @File: requests02_百度翻译.py
 # @Author: xiaohanzhang
-# @Data: 2020/12/5
+# @Date: 2020/12/5
 
 import requests
 import json
