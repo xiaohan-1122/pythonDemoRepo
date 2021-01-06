@@ -10,6 +10,7 @@ from lxml import etree
 import os
 from bs4 import BeautifulSoup
 
+
 def save_img(data, name):
     if not os.path.exists('./images'):
         os.mkdir('./images')

@@ -21,7 +21,7 @@ def test():
 # 属性定位 soup.find('tagName', class_/id/attr='属性值') 返回符合条件的第一个标签
 # soup.find_all('tagName')  返回符合条件的所有内容
 # soup.find_all('tagName', class_/id/attr='属性值')
-# select('选择器') 返回符合条件的所有内容
+# soup.select('选择器') 返回符合条件的所有内容
 
 # 拿到标签后，获取标签中的内容
 # .text/ .string/ .get_text()

@@ -8,6 +8,7 @@ import requests
 import re
 import os
 
+
 def main():
     # 创建文件夹 保存图片
     if not os.path.exists('./qiutu'):

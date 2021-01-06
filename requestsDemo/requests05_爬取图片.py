@@ -7,6 +7,7 @@
 
 import requests
 
+
 def main():
     url = 'https://pic.qiushibaike.com/system/pictures/12387/123875165/medium/Y12P1GEMKDR8IOAT.jpg'
     headers = {
@@ -15,6 +16,7 @@ def main():
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         img_data = response.content
+        # 二进制方式写入文件
         with open('./qiutu.jpg', 'wb') as f:
             f.write(img_data)
 

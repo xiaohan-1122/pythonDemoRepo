@@ -5,6 +5,7 @@
 # @Author: xiaohanzhang
 # @Date: 2020/12/3
 
+# get请求
 import requests
 
 if __name__ == '__main__':

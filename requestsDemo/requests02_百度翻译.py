@@ -5,6 +5,7 @@
 # @Author: xiaohanzhang
 # @Date: 2020/12/5
 
+# post请求
 import requests
 import json
 
