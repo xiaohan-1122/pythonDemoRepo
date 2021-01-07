@@ -122,7 +122,7 @@ def main():
 
     # requests的session对象每次请求会自动带上Cookie,requests.Session对象只是一个用于保存Cookie的对象而已
     session = requests.Session()
-    login('18205322783', 'A262408*', session)
+    login('', '', session)
     if g_is_login:
         get_comment(session)
     create_word_cloud(cut_word())
