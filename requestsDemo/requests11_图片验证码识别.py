@@ -40,7 +40,6 @@ def main():
             'content-type': 'application/x-www-form-urlencoded'
         }
         data = {
-            # 'access_token': refresh_token,
             'image': img
         }
         response = requests.post(url, data=data, headers=headers)
