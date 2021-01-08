@@ -5,6 +5,8 @@
 # @Author: xiaohanzhang
 # @Date: 2021/1/7
 
+# session对象会自动保存cookie
+
 import requests
 import re
 import time
