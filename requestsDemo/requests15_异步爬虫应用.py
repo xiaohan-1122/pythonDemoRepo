@@ -1,11 +1,12 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PyCharm
-# @File: requests13_代理.py
+# @File: requests15_异步爬虫应用.py
 # @Author: xiaohanzhang
-# @Date: 2021/1/8
+# @Date: 2021/1/11
 
-# 快代理、goubanjia.com
+import requests
+
 
 def main():
     pass
