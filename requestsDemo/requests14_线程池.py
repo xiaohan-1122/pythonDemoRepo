@@ -1,7 +1,7 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PyCharm
-# @File: requests14_异步爬虫.py
+# @File: requests14_线程池.py
 # @Author: xiaohanzhang
 # @Date: 2021/1/11
 from multiprocessing.pool import Pool
