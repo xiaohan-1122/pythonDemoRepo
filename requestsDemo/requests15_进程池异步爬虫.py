@@ -1,7 +1,7 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PyCharm
-# @File: requests15_线程池异步爬虫.py
+# @File: requests15_进程池异步爬虫.py
 # @Author: xiaohanzhang
 # @Date: 2021/1/11
 """ 爬取梨视频 """
@@ -45,16 +45,19 @@ def get_video(detail_url):
         'mrd': mrd
     }
     print(f'正在下载{contId}.....')
-    response = requests.get(url, headers=headers, params=params)
-    if response.status_code == 200:
-        data = response.json()
-        video_url = data.get('videoInfo').get('videos').get('srcUrl')
-        video_url = handle_video_url(video_url, contId)
-        save_video(video_url, contId)
-        print(f'{contId}下载完成。。')
-        # return video_url
-    else:
-        print(f'{contId}下载失败！！！')
+    try:
+        response = requests.get(url, headers=headers, params=params)
+        if response.status_code == 200:
+            data = response.json()
+            video_url = data.get('videoInfo').get('videos').get('srcUrl')
+            video_url = handle_video_url(video_url, contId)
+            save_video(video_url, contId)
+            print(f'{contId}下载完成。。')
+            # return video_url
+        else:
+            print(f'{contId}下载失败！！！')
+    except Exception as error:
+        print(f'{contId}下载失败, {error}')
 
 
 def get_detail_url():
