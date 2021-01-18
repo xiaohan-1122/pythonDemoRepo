@@ -1,7 +1,7 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PyCharm
-# @File: requests15_进程池异步爬虫.py
+# @File: requests16_进程池异步爬虫.py
 # @Author: xiaohanzhang
 # @Date: 2021/1/11
 """ 爬取梨视频 """
@@ -12,8 +12,6 @@ from lxml import etree
 from multiprocessing.pool import Pool
 
 # 原则：线程池处理额的是阻塞且耗时的操作
-
-
 def save_video(video_url, id):
     response = requests.get(video_url)
     with open('./' + id + '.mp4', 'wb') as f:

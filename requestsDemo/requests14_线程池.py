@@ -13,7 +13,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 
 def make_thread_pool(num, urls):
-    with ThreadPoolExecutor(max_workers=num) as t:  # 创建一个最大容纳数量为5的线程池
+    with ThreadPoolExecutor(max_workers=num) as t:  # 创建线程池最大容纳数量
         tasks = []
         for i in range(num):
             # 通过submit提交执行的函数到线程池中
