@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: requestsDemo
-# @File: requests06_正则解析案例.py
+# @File: crawler06_正则解析案例.py
 # @Author: xiaohanzhang
 # @Date: 2020/12/15
 import requests

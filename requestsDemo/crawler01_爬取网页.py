@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: requestsDemo
-# @File: requests01_爬取网页.py
+# @File: crawler01_爬取网页.py
 # @Author: xiaohanzhang
 # @Date: 2020/12/3
 

@@ -1,7 +1,7 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PyCharm
-# @File: requests11_图片验证码识别.py
+# @File: crawler11_图片验证码识别.py
 # @Author: xiaohanzhang
 # @Date: 2021/1/6
 

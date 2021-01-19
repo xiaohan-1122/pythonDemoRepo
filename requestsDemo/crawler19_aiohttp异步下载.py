@@ -1,23 +1,29 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PyCharm
-# @File: requests18_协程应用.py
+# @File: crawler19_aiohttp异步下载.py
 # @Author: xiaohanzhang
 # @Date: 2021/1/18
 
-import requests
+import aiohttp
 import asyncio
+import aiofiles
 
 
 async def get_video(url, count):
-    print(f'正在下载。。。{count}')
-    response = requests.get(url)
-    if response.status_code == 200:
-        with open(f'./{count}.mp4', 'wb') as f:
-            f.write(response.content)
-        print(f'下载完成。。。{count}')
-    else:
-        print('下载视频失败')
+    print(f'开始下载。。。{count}')
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+            # text()返回字符串形式的响应数据
+            # read()返回二进制形式的响应数据
+            # json()返回json对象
+            if response.status == 200:
+                async with aiofiles.open(f'./{count}.mp4', 'wb') as f:
+                    data = await response.read()
+                    await f.write(data)
+                print(f'下载完成。。。{count}')
+            else:
+                print(f'下载视频失败{count}')
 
 
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: requestsDemo
-# @File: requests10_xpath下载图片.py
+# @File: crawler10_xpath下载图片.py
 # @Author: xiaohanzhang
 # @Date: 2020/12/26
 

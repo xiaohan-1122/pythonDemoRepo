@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: requestsDemo
-# @File: requests02_百度翻译.py
+# @File: crawler02_百度翻译.py
 # @Author: xiaohanzhang
 # @Date: 2020/12/5
 

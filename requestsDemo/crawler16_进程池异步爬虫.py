@@ -1,25 +1,17 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PyCharm
-# @File: requests14_线程池.py
+# @File: crawler16_进程池异步爬虫.py
 # @Author: xiaohanzhang
-# @Date: 2021/1/15
+# @Date: 2021/1/11
+""" 爬取梨视频 """
 import random
+
 import requests
 from lxml import etree
-from concurrent.futures import ThreadPoolExecutor
+from multiprocessing.pool import Pool
 
 # 原则：线程池处理额的是阻塞且耗时的操作
-
-
-def make_thread_pool(num, urls):
-    with ThreadPoolExecutor(max_workers=num) as t:  # 创建线程池最大容纳数量
-        tasks = []
-        for i in range(num):
-            # 通过submit提交执行的函数到线程池中
-            t.submit(get_video, urls[i])
-
-
 def save_video(video_url, id):
     response = requests.get(video_url)
     with open('./' + id + '.mp4', 'wb') as f:
@@ -97,7 +89,8 @@ def main():
     # for url in urls:
     #     get_video_url(url)
 
-    make_thread_pool(len(urls), urls)
+    pool = Pool(len(urls))
+    pool.map(get_video, urls)
 
 
 if __name__ == '__main__':

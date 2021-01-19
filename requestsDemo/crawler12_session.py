@@ -1,7 +1,7 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PyCharm
-# @File: requests12_session.py
+# @File: crawler12_session.py
 # @Author: xiaohanzhang
 # @Date: 2021/1/7
 

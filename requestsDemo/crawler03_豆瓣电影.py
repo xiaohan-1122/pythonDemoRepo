@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: requestsDemo
-# @File: requests03_豆瓣电影.py
+# @File: crawler03_豆瓣电影.py
 # @Author: xiaohanzhang
 # @Date: 2020/12/6
 

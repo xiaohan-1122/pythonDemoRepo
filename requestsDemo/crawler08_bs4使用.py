@@ -1,7 +1,7 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PyCharm
-# @File: requests08_bs4使用.py
+# @File: crawler08_bs4使用.py
 # @Author: xiaohanzhang
 # @Date: 2020/12/24
 

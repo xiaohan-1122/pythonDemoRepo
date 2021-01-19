@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: requestsDemo
-# @File: requests05_爬取图片.py
+# @File: crawler05_爬取图片.py
 # @Author: xiaohanzhang
 # @Date: 2020/12/14
 

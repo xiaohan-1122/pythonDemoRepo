@@ -1,7 +1,7 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PyCharm
-# @File: requests15_进程池.py
+# @File: crawler15_进程池.py
 # @Author: xiaohanzhang
 # @Date: 2021/1/11
 # 进程池
