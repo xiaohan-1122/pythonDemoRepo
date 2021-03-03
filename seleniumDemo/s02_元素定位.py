@@ -13,9 +13,9 @@ import time
 id
 name属性
 class_name 类名
-tag_name 标签名
-link_text   超链接文本
-partial_link_text   超链接文本
+tag_name 标签名 只能查找页面唯一元素或者多个相同元素中的第一个元素
+link_text   超链接文本 完全匹配
+partial_link_text   超链接文本 模糊匹配
 xpath   元素路径
 css     选择器
 """
@@ -60,14 +60,33 @@ def find_by_tag(driver):
     input.send_keys('重庆')
 
 
+def find_by_link_text(wd):
+    """通过link_text定位元素 完全匹配 a标签文字"""
+    element = wd.find_element_by_link_text('新闻')
+    print(element.text)
+    element.click()
+
+
+def find_by_partial_link_text(wd):
+    """通过partial_link_text定位元素 模糊匹配 a标签"""
+    a = wd.find_element_by_partial_link_text('闻')
+    a.click()
+    print(a.text)
+
+
 def main():
     driver = webdriver.Chrome()
     driver.get('https://www.baidu.com/')
 
+    # 隐氏等待 如果找不到元素，每隔0.5秒再次查找一次，10秒超时报错
+    driver.implicitly_wait(5)
+
     # find_by_id(driver)
     # find_by_name(driver)
     # find_by_class(driver)
-    find_by_tag(driver)
+    # find_by_tag(driver)
+    # find_by_link_text(driver)
+    find_by_partial_link_text(driver)
 
     time.sleep(5)
     driver.quit()
