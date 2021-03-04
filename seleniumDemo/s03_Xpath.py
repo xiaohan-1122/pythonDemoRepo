@@ -106,12 +106,13 @@ def main():
     wd.implicitly_wait(5)
 
     # find_by_absolute_path(wd)
-    find_relative_path_test(wd)
-    # find_by_attribute(wd)
+    # find_relative_path_test(wd)
+    find_by_attribute(wd)
     # find_by_sequence(wd)
     # find_by_logical(wd)
     # find_by_other(wd)
 
+    time.sleep(2)
     wd.quit()
 
 
