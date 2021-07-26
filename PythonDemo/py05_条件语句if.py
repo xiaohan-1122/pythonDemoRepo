@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PythonDemo
-# @File: py_02_if.py
+# @File: py05_条件语句if.py
 # @Author: xiaohanzhang
 # @Data: 2020/8/5
 

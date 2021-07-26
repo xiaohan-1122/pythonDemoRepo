@@ -47,8 +47,4 @@ print(type(eval(str2)))     # <class 'float'>
 print(type(eval(str3)))     # <class 'tuple'>
 print(type(eval(str4)))     # <class 'list'>
 
-"""
-数字之间的逻辑
-and: 只要有一个值为0，则结果0，否则结果为最后一个非0数字
-or: 只有所有值都为0，结果才为0，否则结果为第一个非0数字
-"""
+

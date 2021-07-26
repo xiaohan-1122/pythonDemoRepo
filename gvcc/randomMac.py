@@ -1,13 +1,12 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PyCharm
-# @File: getRandomMac.py
+# @File: randomMac.py
 # @Author: xiaohanzhang
 # @Date: 2021/4/25
 
 import random
-
-
+import re
 def getRandomMac():
 
     Maclist = []
@@ -16,7 +15,6 @@ def getRandomMac():
         Maclist.append(RANDSTR)
         mac = ":".join(Maclist)
     print(mac)
-
 
 def main():
     getRandomMac()
