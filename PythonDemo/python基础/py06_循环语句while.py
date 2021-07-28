@@ -1,15 +1,50 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PythonDemo
-# @File: py_03_for&while.py
+# @File: py06_循环语句while.py
 # @Author: xiaohanzhang
 # @Data: 2020/8/5
 
+# 打印5次啊啊啊啊
+i = 0
+while i < 5:
+    print('啊啊啊啊')
+    i += 1
+
+print('=' * 50)
+
+# 1-100累加
+result = 0
+i = 1
+while i <= 100:
+    result += i
+    i += 1
+print(f"1-100累加的值是 {result}")
+print('=' * 50)
+
+# 1-100偶数累加
+result = 0
+i = 0
+while i <= 100:
+    result += i
+    i += 2
+print(f'1-100偶数累加的值是 {result}')
+
+result = 0
+i = 0
+while i <= 100:
+    if i % 2 == 0:
+        result += i
+    i += 1
+print(f'1-100偶数累加的值是 {result}')
+
+
 names = ['小红', '小蓝', '小黄']
-for name in names:
-    print(name)
-else:
-    print("for循环正常结束后，会执行的代码")
+
+index = 0
+while index < len(names):
+    print(names[index])
+    index += 1
 print('=' * 50)
 
 index = 0
@@ -19,6 +54,14 @@ while index < len(names):
 else:
     print('white循环正常结束后，会执行的代码')
 print('=' * 50)
+
+
+for name in names:
+    print(name)
+else:
+    print("for循环正常结束后，会执行的代码")
+print('=' * 50)
+
 
 # range()函数，可以生成一个整数序列,比如range(5)生成的序列是从0开始小于5的整数[0,1,2,3,4]
 sum = 0

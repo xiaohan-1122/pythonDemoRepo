@@ -10,7 +10,7 @@
 int(x[,base])   将x转换为一个整数
 float(x)        将x转换为一个浮点数
 str(x)          将对象x转换为字符串
-eval(str)       将对象x转换为表达式字符串(真实类型)
+eval(str)       将对象x转换为真实类型
 tuple(s)        将序列s转换为一个元组
 list(s)         将序列s转换为一个列表
 """
