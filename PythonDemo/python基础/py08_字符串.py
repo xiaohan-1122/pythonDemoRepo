@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PythonDemo
-# @File: py_04_string.py
+# @File: py08_字符串.py
 # @Author: xiaohanzhang
 # @Data: 2020/8/5
 
