@@ -11,13 +11,13 @@ paragraph = """这是一个段落，
 可以由多行组成"""
 
 str = 'python'
-print(str[0:-1])    # 下标为0的字符到倒数第二个字符
-print(str[0])       # 下标为0的字符
-print(str[2:4])     # 下标为2的字符到下标为4之前的字符
-print(str[2:])      # 下标2开始的后的所有字符
-print(str * 2)      # 输出字符串两次
-print(str + "TEST") # 连接字符串
-print(str[-1:])     # -1表示最后一个字符
+print(str[0])       # 下标为0的字符   p
+print(str[0:-1])    # 下标为0的字符到倒数第二个字符   pytho
+print(str[2:4])     # 下标为2的字符到下标为4之前的字符     th
+print(str[2:])      # 下标2开始的后的所有字符  thon
+print(str * 2)      # 输出字符串两次   pythonpython
+print(str + "TEST") # 连接字符串     pythonTEST
+print(str[-1:])     # -1表示最后一个字符    n
 print('*' * 50)
 # 使用反斜杠()转义特殊字符，如果你不想让反斜杠发生转义，可以在字符串前面添加一个 r，表示原始字符串
 print('aa\nbb')
@@ -35,26 +35,65 @@ print(str2)         # 036
 # -1表示从右向左切
 print(str[-1::-1])  # 9876543210
 print(str[::-1])    # 9876543210
+print('*' * 50)
 
 
 string = "abcdefgocdoe"
-# 字符串string长度
-print(len(string))
+# 字符串长度
+len(string)
 
-# string中字符串"o"的个数
+# 1.find()
+print(string.find("a")) # 返回string中第一个“a”所在下标,不存在返回-1   0
+print(string.find("a", 3, 5))   # 在3-5下标范围内查找   -1
+print(string.rfind("a"))    # 从右往左查找 0
+print(string.find("fff"))   # -1
+
+# 2.index()   返回字符串string中字符串“a“所在下标，不存在报异常
+# print(string.index("a"))
+# print(string.index('a', 3, 5))
+# print(string.rindex("a"))  # 从右往左查找
+
+# 3.count() string中字符串"o"的个数
 print(string.count("o"))
+print(string.count("o", 3, 5))
 
-# 字符串string中是否包含字符串“a”,返回string中第一个“a”所在下标,不存在返回-1
-print(string.find("a"))
-print(string.rfind("a"))    # 从右往左查找
+# 4.replace() 替换,原字符串不会改变，返回新的字符串
+new_str = string.replace("old", "new")
+new_str = string.replace("old", "new", 1)  # 1表示替换次数 只替换第一个"old"字符串
 
-# 返回字符串string中字符串“a“所在下标，不存在报异常
-print(string.index("a"))
-print(string.rindex("a"))  # 从右往左查找
+# 5.split() 将字符串按照某个字符串进行分割,不传任何参数时,则按照任意空白字符分割
+string = "er ewe dsdsf fdsfs"
+print(string.split(" "))    # ['er', 'ewe', 'dsdsf', 'fdsfs']
+print(string.split(" ", 2))    # 2表示分割次数    ['er', 'ewe', 'dsdsf fdsfs']
 
-# 将string中的"old"用"new"替换,原字符串不会改变，返回新的字符串
-string.replace("old", "new")
-string.replace("old", "new", 1)  # 只替换第一个"old"字符串
+# 6.join()  字符串合并
+string = 'abc'
+sss = "..."
+print(sss.join(string))  # a...b...c
+# 去掉字符串中的空格和\t
+string = "sd hs\tj  fgdh \tsfg\tdshf gdshj f gs"
+print("".join(string.split()))
+
+# 7.capitalize()    将字符串第一个字符转换为大写
+string = 'name is'
+string.capitalize()     # Name is
+
+# 7.title() 每个单词首字母大写
+string.title()  # Name Is
+
+# 8.lower() 将字符串转为小写
+string.lower()  # name is
+
+# 9.upper() 将字符串转为大写
+string.upper()  # NAME IS
+
+# 10.partition() 将字符串string以"str"分割为三部分，str前、str、str后，以第一个"str"为准
+string.partition("str")
+string.rpartition("str")  # 从右边起
+
+
+
+
 
 # 判断字符串string是否以"a"开头
 print(string.startswith("a"))
@@ -62,11 +101,7 @@ print(string.startswith("a"))
 # 判断字符串string是否以"s"结尾
 print(string.endswith("s"))
 
-# 将字符串string转为小写
-print(string.lower())
 
-# 将字符串string转为大写
-print(string.upper())
 
 # 去掉字符串左边空格
 string.lstrip()
@@ -87,13 +122,9 @@ string.rjust(width)
 # 返回原字符串居中，并且使用空格填充至长度的width的新字符串
 string.center(width)
 
-# 将字符串按照某个字符串进行分割,split()方法不传任何参数时,则按照任意空白字符分割
-string = "er ewe dsdsf fdsfs"
-print(string.split(" "))    # ['er', 'ewe', 'dsdsf', 'fdsfs']
 
-# 将字符串string以"str"分割为三部分，str前、str、str后，以第一个"str"为准
-string.partition("str")
-string.rpartition("str")  # 从右边起
+
+
 
 # 字符串按 “\n”切割
 string.splitlines()
@@ -112,13 +143,7 @@ string.isalnum()
 # 字符串中只包含空格
 string.isspace()
 
-# string每一个字符后插入字符串sss,构造新的字符串
-sss = "xxx"
-print(sss.join(string))  # axxxbxxxcxxx1xxx2xxx3
 
-# 去掉字符串中的空格和\t
-string = "sd hs\tj  fgdh \tsfg\tdshf gdshj f gs"
-print("".join(string.split()))
 
 print('*' * 50)
 
