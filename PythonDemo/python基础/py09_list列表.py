@@ -1,16 +1,19 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PythonDemo
-# @File: py_05_list.py
+# @File: py09_list列表.py
 # @Author: xiaohanzhang
 # @Data: 2020/8/11
 
-# list里面的元素的数据类型也可以不同
+# list里面的元素的数据类型也可以不同，开发过程中尽量存储相同类型数据
 list = ["hahah", 1, ['a', 'd'], True]
 
 # 遍历
 name_list = ["小红", "小蓝", "小绿"]
 print(name_list)
+print(name_list[1])
+
+
 for name in name_list:
     print(name)
 print('*' * 50)

@@ -91,61 +91,52 @@ string.upper()  # NAME IS
 string.partition("str")
 string.rpartition("str")  # 从右边起
 
-
-
-
-
-# 判断字符串string是否以"a"开头
-print(string.startswith("a"))
-
-# 判断字符串string是否以"s"结尾
-print(string.endswith("s"))
-
-
-
-# 去掉字符串左边空格
-string.lstrip()
-
-# 去掉字符串右边空格
-string.rstrip()
-
-# 去掉字符串两边空格
-string.strip()
-
-width = 20
-# 返回原字符串左对齐，并且使用空格填充至长度的width的新字符串
-string.ljust(width)
-
-# 返回原字符串右对齐，并且使用空格填充至长度的width的新字符串
-string.rjust(width)
-
-# 返回原字符串居中，并且使用空格填充至长度的width的新字符串
-string.center(width)
-
-
-
-
-
-# 字符串按 “\n”切割
+# 11.splitlines()   字符串按 “\n”切割
 string.splitlines()
 
-# 字符串中是否都是数字,都不能判断小数
-string.isdecimal()  # 全角数字,尽量使用这个方法
-string.isdigit()    # 全角数字、"(1)"、\u00b2(unicode字符串)
-string.isnumeric()  # 全角数字、汉字数字
+# 12.lstrip()   去掉字符串左边空格
+string.lstrip()
 
-# 字符串中是否都是字母
+# 13.rstrip()   去掉字符串右边空格
+string.rstrip()
+
+# 14.strip()    去掉字符串两边空格
+string.strip()
+
+# 15.ljust() 返回原字符串左对齐，并且使用空格填充至长度的width的新字符串
+width = 20
+string.ljust(width)
+
+# 16.rjust()    返回原字符串右对齐，并且使用空格填充至长度的width的新字符串
+string.rjust(width)
+
+# 17.center()   返回原字符串居中，并且使用空格填充至长度的width的新字符串
+string.center(width)
+
+# 18.startswith()   判断字符串string是否以"a"开头
+print(string.startswith("a"))
+
+# 19.endswith()     判断字符串string是否以"s"结尾
+print(string.endswith("s"))
+
+# 字符串中是否都是数字,都不能判断小数
+# 20.isdecimal()    全角数字,尽量使用这个方法
+string.isdecimal()
+
+# 21.isdigit()  全角数字、"(1)"、\u00b2(unicode字符串)
+string.isdigit()
+
+# 22.isnumeric()    全角数字、汉字数字
+string.isnumeric()
+
+# 23.isalpha()  字符串中是否都是字母
 string.isalpha()
 
-# 字符串中是否只有数字和字母
+# 24.isalnum()  字符串中是否只有数字和字母
 string.isalnum()
 
-# 字符串中只包含空格
+# 25.isspace()  字符串中只包含空格
 string.isspace()
-
-
-
-print('*' * 50)
 
 
 # 练习
