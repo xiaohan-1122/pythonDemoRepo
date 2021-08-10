@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PythonDemo
-# @File: py_06_tuple.py
+# @File: py10_tuple元组.py
 # @Author: xiaohanzhang
 # @Data: 2020/8/13
 
