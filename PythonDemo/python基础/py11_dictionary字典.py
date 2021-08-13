@@ -27,6 +27,7 @@ print(a)    # 小明
 a = student_dict.get("nnn", -1)
 print(a)    # -1
 
+
 dict1['name']
 # dict["key"],key不存在会报错,in判断的是key
 if "nnn" in dict1:
@@ -59,18 +60,31 @@ print(dic1)     # {'key1': 'value3', 'key2': 'value2'}
 
 print("-" * 50)
 
+# 查找字典所有的key 并返回可迭代对象
+keys = student_dict.keys()
+print(keys)     # dict_keys(['name', 'gender'])
 
-# 循环遍历
+# 查找字典所有的value 并返回可迭代对象
+values = student_dict.values()
+print(values)   # dict_values(['小明', '男'])
+
+# 查找字典所有的元素 并返回可迭代对象 内容为元组
+items = student_dict.items()
+print(items)    # dict_items([('name', '小明'), ('gender', '男')])
+
+# 遍历key
 for key in student_dict.keys():
     print("key =", key)
 
 print("-" * 50)
 
+# 遍历value
 for value in student_dict.values():
     print("value =", value)
 
 print("-" * 50)
 
+# 遍历item
 for key, value in student_dict.items():
     print("key =", key, ", value =", value)
 

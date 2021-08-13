@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PythonDemo
-# @File: py_09_推导式.py
+# @File: py14_推导式.py
 # @Author: xiaohanzhang
 # @Data: 2020/8/15
+
 """
 推导式格式
 列表推导式格式: [xxx for xxx in range()]
