@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PythonDemo
-# @File: py_10_函数.py
+# @File: py15_函数.py
 # @Author: xiaohanzhang
 # @Data: 2020/8/17
 """
@@ -18,6 +18,7 @@ gl_a = 10
 gl_name = "唐僧"
 
 
+# 定义函数
 def test(num):
     """ 函数的说明文档 """
     print("函数内部参数num的内存地址 %d" % id(num))
