@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PythonDemo
-# @File: py_11_lambda.py
+# @File: py18_lambda.py
 # @Author: xiaohanzhang
 # @Data: 2020/8/24
 
@@ -37,11 +37,11 @@ print(fn3(4))
 
 # ----------- 可变参数*args -------------
 fn4 = lambda *args: args
-print(fn4('a', 'b'))
+print(fn4('a', 'b'))    # ('a', 'b')
 
 # ----------- 可变参数 *kwargs ----------
 fn5 = lambda **kwargs: kwargs
-print(fn5(name='Tom', age=12))
+print(fn5(name='Tom', age=12))  # {'name': 'Tom', 'age': 12}
 
 
 # lambda应用
