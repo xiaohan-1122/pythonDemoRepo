@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PythonDemo
-# @File: py_13_file.py
+# @File: py20_file.py
 # @Author: xiaohanzhang
 # @Data: 2020/8/27
 # ----------------------------------- 文件的基本操作 -----------------------------------------
@@ -18,7 +18,7 @@ read 方法可以一次性读入并返回文件的所有内容
 close 方法负责关闭文件
 """
 try:
-    file = open("text")     # 打开文件(默认只读方式)
+    file = open("../text")     # 打开文件(默认只读方式)
     text = file.read()      # 读取文件
     text2 = file.read()     # 已经读取过来，文件指针在末尾，读取不到任何内容
     file.close()            # 关闭文件
@@ -43,12 +43,12 @@ w+:以读写方式打开。如果文件存在会被覆盖，如果文件不存�
 a+:以读写方式打开。如果文件已存在，文件指针会放在文件结尾；如果文件不存在，会创建文件
 """
 
-file = open("text", "a")
+file = open("../text", "a")
 file.write("hello")
 file.close()
 print("-" * 50)
 
-file = open("text")
+file = open("../text")
 print(file.read())
 file.close()
 print("-" * 50)
@@ -59,7 +59,7 @@ readline 方法可以一次读取一行内容
 方法执行后，会把文件指针移动到下一行，准备再次读取
 """
 # 读取大文件
-file = open("text")
+file = open("../text")
 while True:
     text = file.readline()
     if not text:
@@ -74,7 +74,7 @@ print("-" * 50)
 readlines() 按行读取,读取全部内容
 返回一个列表，每一行数据为一个元素
 """
-file = open("text")
+file = open("../text")
 text = file.readlines()
 print(text)     # ['hello\n', '2222\n', '3333\n', '4444hellohello']
 file.close()
@@ -100,7 +100,7 @@ seek() 用来移动文件指针
 # file_write.close()
 
 # 大文件复制
-file_read = open("text")
+file_read = open("../text")
 file_write = open("text[副本]", "w")
 
 while True:
