@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Software: PythonDemo
-# @File: py_14_class.py
+# @File: py21_类class.py
 # @Author: xiaohanzhang
 # @Data: 2020/8/30
 """
