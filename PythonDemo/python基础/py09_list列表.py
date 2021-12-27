@@ -83,6 +83,18 @@ print(list1)    # [1, 2, 3]
 list1.sort(reverse=True)    # 降序排列
 print(list1)    # [3, 2, 1]
 
+
+def takeSecond(elem):
+    return elem['age']
+
+
+ll = [{'name': '小兰', 'age': 17}, {'name': '柯南', 'age': 8}, {'name': '灰原哀', 'age': 9}]
+ll.sort(key=takeSecond)
+print(ll)
+
+ll.sort(key=lambda elem: elem['age'], reverse=True)
+print(ll)
+
 # 15. copy() 复制列表
 list2 = list1.copy()
 print(list2)    # [3, 2, 1]
