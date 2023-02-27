@@ -11,7 +11,6 @@ name = 'Luffy'
 age = 17
 score = 98.64
 
-
 """
 格式化输出:
 %s  字符串
@@ -44,7 +43,7 @@ print("I'm \"OK\" !")
 print('I\'m OK !')
 print('hello\nhi')
 print('hello\\hi')
-print(r'hello\nhi') # r表示不转义
+print(r'hello\nhi')  # r表示不转义
 
 # 不换行输出
 print(name, end=' ')

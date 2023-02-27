@@ -5,8 +5,8 @@
 # @Author: xiaohanzhang
 # @Date: 2021/7/30
 
-str = 'hello'
-for i in str:
+str1 = 'hello'
+for i in str1:
     print(i)
 print('*' * 50)
 

@@ -10,14 +10,14 @@ sentence = "这是一个句子。"
 paragraph = """这是一个段落，
 可以由多行组成"""
 
-str = 'python'
-print(str[0])       # 下标为0的字符   p
-print(str[0:-1])    # 下标为0的字符到倒数第二个字符   pytho
-print(str[2:4])     # 下标为2的字符到下标为4之前的字符     th
-print(str[2:])      # 下标2开始的后的所有字符  thon
-print(str * 2)      # 输出字符串两次   pythonpython
-print(str + "TEST") # 连接字符串     pythonTEST
-print(str[-1:])     # -1表示最后一个字符    n
+s1 = 'python'
+print(s1[0])       # 下标为0的字符   p
+print(s1[0:-1])    # 下标为0的字符到倒数第二个字符   pytho
+print(s1[2:4])     # 下标为2的字符到下标为4之前的字符     th
+print(s1[2:])      # 下标2开始的后的所有字符  thon
+print(s1 * 2)      # 输出字符串两次   pythonpython
+print(s1 + "TEST") # 连接字符串     pythonTEST
+print(s1[-1:])     # -1表示最后一个字符    n
 print('*' * 50)
 # 使用反斜杠()转义特殊字符，如果你不想让反斜杠发生转义，可以在字符串前面添加一个 r，表示原始字符串
 print('aa\nbb')
@@ -27,14 +27,14 @@ print('*' * 50)
 
 # 字符串的切片，切片同样适用于list和tuple
 # str[索引:索引:步长] 步长是选取间隔，正负数均可，负数表示从右边开始选取
-str = "0123456789"
-str1 = str[0:5]
+s2 = "0123456789"
+str1 = s2[0:5]
 print(str1)         # 01234
-str2 = str[0:8:3]   # 从下标为0的字符开始，到下标为8的字符之前（左闭右开）,每隔三个字符取一个
+str2 = s2[0:8:3]   # 从下标为0的字符开始，到下标为8的字符之前（左闭右开）,每隔三个字符取一个
 print(str2)         # 036
 # -1表示从右向左切
-print(str[-1::-1])  # 9876543210
-print(str[::-1])    # 9876543210
+print(s2[-1::-1])  # 9876543210
+print(s2[::-1])    # 9876543210
 print('*' * 50)
 
 
@@ -43,7 +43,7 @@ string = "abcdefgocdoe"
 len(string)
 
 # 1.find()
-print(string.find("a")) # 返回string中第一个“a”所在下标,不存在返回-1   0
+print(string.find("a"))  # 返回string中第一个“a”所在下标,不存在返回-1   0
 print(string.find("a", 3, 5))   # 在3-5下标范围内查找   -1
 print(string.rfind("a"))    # 从右往左查找 0
 print(string.find("fff"))   # -1

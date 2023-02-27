@@ -49,12 +49,11 @@ print('*' * 50)
 
 """ 三目运算符 """
 # 条件成立的表达式 if 条件 else 条件不成立执行的表达式
-str = '成年人' if age >= 18 else '未成年人'
-print(str)
+str1 = '成年人' if age >= 18 else '未成年人'
+print(str1)
 a = 1
 b = 2
 c = a if a > b else b
-
 
 # is 判断两个标识符是否引用同一个对象，x is y 类似 id(x)==id(y)
 # is not 判断两个标识符是否引用不同对象，x is not y 类似 id(x)!=id(y)
