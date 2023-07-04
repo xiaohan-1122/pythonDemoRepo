@@ -143,7 +143,8 @@ string = 'https://www.baidu.com'
 string.removesuffix('https://')  # 'www.baidu.com'
 
 # 27.removesuffix() 删除字符串后缀
-string.removesuffix('.com')     # https://www.baidu
+string = 'aaa.txt'
+string.removesuffix('.txt')     # aaa
 
 
 # 练习
