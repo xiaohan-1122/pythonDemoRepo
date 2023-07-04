@@ -16,7 +16,7 @@ print(s1[0:-1])    # 下标为0的字符到倒数第二个字符   pytho
 print(s1[2:4])     # 下标为2的字符到下标为4之前的字符     th
 print(s1[2:])      # 下标2开始的后的所有字符  thon
 print(s1 * 2)      # 输出字符串两次   pythonpython
-print(s1 + "TEST") # 连接字符串     pythonTEST
+print(s1 + "TEST")  # 连接字符串     pythonTEST
 print(s1[-1:])     # -1表示最后一个字符    n
 print('*' * 50)
 # 使用反斜杠()转义特殊字符，如果你不想让反斜杠发生转义，可以在字符串前面添加一个 r，表示原始字符串
@@ -137,6 +137,13 @@ string.isalnum()
 
 # 25.isspace()  字符串中只包含空格
 string.isspace()
+
+# 26.removeprefix() 删除字符串前缀
+string = 'https://www.baidu.com'
+string.removesuffix('https://')  # 'www.baidu.com'
+
+# 27.removesuffix() 删除字符串后缀
+string.removesuffix('.com')     # https://www.baidu
 
 
 # 练习
