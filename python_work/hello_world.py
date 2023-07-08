@@ -1,21 +1,25 @@
 print('hello python world!')
 
-message = 'My name is python'
-print(message)
 
-name = 'ada_loveLave'
-print(name.title())
-print(name.upper())
-print(name.lower())
+# 列表推导式 格式: [xxx for xxx in range() 条件]
+squares = [value ** 2 for value in range(1,11)]
+print(squares)
 
-first_name = 'wang'
-last_name = 'qiang'
-full_name = f'{first_name} {last_name}'
-print(full_name)
-print(f'\t{full_name}')
-print(f'\n{full_name}')
+nums = []
+for n in range(21):
+    if n % 2 == 1:
+        nums.append(n)
+print(nums)
 
-str1 = 'https://baidu.com'
-print(str1.removeprefix('https://'))
-print(str1.removesuffix('.com'))
+nums2 = [n for n in range(21) if n % 2 == 1]
+print(nums2)
 
+names = ['a', 'b', 'c', 'd', 'e']
+print(names[1:3])   # 下标1开始取到下标3之前的元素 ['b', 'c']
+print(names[:3])    # 默认从0开始 ['a', 'b', 'c']
+print(names[2:])    # 默认取到最后一位 ['c', 'd', 'e']
+print(names[-3:])   # 取列表最后3个元素 ['c', 'd', 'e']
+# 遍历列表中部分元素时，可以使用切片
+# 遍历列表最后三个元素
+for name in names[-3:]:
+    print(name)

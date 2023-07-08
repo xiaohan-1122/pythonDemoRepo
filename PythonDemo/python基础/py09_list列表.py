@@ -84,6 +84,12 @@ list1.sort(reverse=True)  # 降序排列
 print(list1)  # [3, 2, 1]
 
 
+list1 = [2, 1, 3]
+new_list1 = sorted(list1)   # 升序排列
+print(new_list1)
+new_list1 = sorted(list1, reverse=True)
+print(new_list1)    # 降序排列
+
 def takeSecond(elem):
     return elem['age']
 
@@ -145,3 +151,20 @@ list5 = [['a', 'b'], ['小白', '小黑'], [1, 9]]
 # 获取'小白'
 name = list5[1][0]
 print(name)
+
+# 列表推导式 格式: [xxx for xxx in range()]
+squares = [value ** 2 for value in range(1,11)]     # 1-10的平方
+odds = [num for num in range(11) if num % 2 == 1]     # 10以内的奇数
+
+# 列表切片
+names = ['a', 'b', 'c', 'd', 'e']
+print(names[1:3])   # 下标1开始取到下标3之前的元素 ['b', 'c']
+print(names[:3])    # 默认从0开始 ['a', 'b', 'c']
+print(names[2:])    # 默认取到最后一位 ['c', 'd', 'e']
+print(names[-3:])   # 取列表最后3个元素 ['c', 'd', 'e']
+# 遍历列表中部分元素时，可以使用切片
+# 遍历列表最后三个元素
+for name in names[-3:]:
+    print(name)
+# 复制一个列表可以使用切片
+new_names = names[:]
