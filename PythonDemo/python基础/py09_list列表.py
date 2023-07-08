@@ -168,3 +168,9 @@ for name in names[-3:]:
     print(name)
 # 复制一个列表可以使用切片
 new_names = names[:]
+
+
+if names:
+    print('列表中有元素')
+else:
+    print('列表是空的!')
